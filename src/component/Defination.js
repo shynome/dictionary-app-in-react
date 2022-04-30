@@ -7,7 +7,6 @@ import Select from "./Select.js";
 const Defination = ({ mean, main, audio }) => {
   return (
     <>
-    
       <div className="container-fluid my-3">
         <div className="row ">
           <div className="col-12 text-center text-capitalize fs-1 fw-bold  mb-4 ">
@@ -26,9 +25,8 @@ const Defination = ({ mean, main, audio }) => {
             meaning & definitions :
           </div> */}
           <div className="col-12 mx-3">
-              <Select mean={mean} />
+            <Select mean={mean} />
           </div>
-
         </div>
       </div>
     </>
