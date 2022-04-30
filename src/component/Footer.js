@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top fixed-bottom bg-light" >
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-5 border-top fixed-bottom bg-light" >
     <div className="col-md-4 d-flex align-items-center ms-3">
       <a href="/" className="my-auto me-2 mb-md-0 text-muted text-decoration-none lh-1">
       <i class="bi bi-journal-bookmark-fill"></i>

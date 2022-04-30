@@ -74,7 +74,7 @@ function partMean(part) {
     <div className="tab-content mx-3" id="myTabContent">
       {partOf.map((name)=>{
         return(
-          <div className="tab-pane fade show " id={name}  role="tabpanel" aria-labelledby={name+"-tab"}>
+          <div className="tab-pane fade show mb-5" id={name}  role="tabpanel" aria-labelledby={name+"-tab"}>
             <div className="fw-normal">
               <h1 className="text-start my-3 text-capitalize fs-6 fw-bold">Meaning & Definitions</h1>
               <ul className="list-group ">
