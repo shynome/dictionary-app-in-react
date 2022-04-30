@@ -2,6 +2,7 @@ import Footer from "./component/Footer";
 import Defination from "./component/Defination";
 import "./App.css";
 import React, { useState } from "react";
+import type { Result } from "./api";
 
 const apiBase = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
@@ -16,7 +17,9 @@ const App = () => {
   });
 
   const dataApi = async () => {
-    const resp = await fetch(apiBase + word).then((r) => r.json());
+    // 这里也用到了类型批注
+    const resp: Result[] = await fetch(apiBase + word).then((r) => r.json());
+    // 点击audio就可以跳转到对应类型定义
     const url = resp[0].phonetics[0].audio;
     setState({
       mean: resp,
@@ -49,7 +52,7 @@ const App = () => {
                 className="form-control-sm border-1 border-primary px-2 col-md-3 col-sm-4"
                 placeholder="Type your word"
                 id="floatingInput"
-                input={word}
+                value={word}
                 onChange={(e) => setWord(e.target.value)}
               />
               <button className="btn btn-primary text-light col-md-1 col-sm-2 mx-2">
